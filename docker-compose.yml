@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.9.29-management
+    container_name: rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    ports:
+      - "5672:5672" # Port for AMQP communication
+      - "15672:15672" # Port for the management web interface
+    volumes:
+      - ./data:/var/lib/rabbitmq # You can change the path as needed
+    networks:
+      - rabbitmq_network
+
+networks:
+  rabbitmq_network:
+    driver: bridge
+
+# COMMANDS: docker-compose up -d, docker-compose down
