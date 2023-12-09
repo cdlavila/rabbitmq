@@ -1,10 +1,10 @@
 import pika
 
 # RabbitMQ connection URL
-connection_url = "amqp://student:XYR4yqc.cxh4zug6vje@rabbitmq-exam.rmq3.cloudamqp.com/mxifnklj"
-queue_name = "exam"
-routing_key = "267958c0-b8bd-4778-8250-8d2db452d058"
-exchange_name = "exchange.267958c0-b8bd-4778-8250-8d2db452d058"
+connection_url = "the_url_provided_by_cloudamqp"
+queue_name = "the_queue_name_provided_by_cloudamqp"
+routing_key = "the_routing_key_provided_by_cloudamqp"
+exchange_name = "the_exchange_name_provided_by_cloudamqp"
 
 # Create a connection to the RabbitMQ server
 parameters = pika.URLParameters(connection_url)
